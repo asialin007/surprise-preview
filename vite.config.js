@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
-  base: '/surprise-preview/',
+  base: process.env.NODE_ENV === 'production' ? '/surprise-preview/' : '/',
   build: {
     rollupOptions: {
       input: {

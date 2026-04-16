@@ -66,41 +66,41 @@
     <!-- 日期选择器（sticky 吸顶，白底圆角） -->
     <div id="date-selector" class="sticky top-[88px] z-50 bg-bg-white rounded-tl-[12px] rounded-tr-[12px] pt-[8px] pb-[8px] px-[8px] shrink-0 relative">
       <!-- 日期滚动区 -->
-      <div class="flex gap-[4px] items-center overflow-x-auto" style="-webkit-overflow-scrolling: touch; scrollbar-width: none;">
+      <div id="date-list" class="flex gap-[4px] items-center overflow-x-auto" style="-webkit-overflow-scrolling: touch; scrollbar-width: none;">
         <!-- 今天（选中态） -->
-        <div class="w-[64px] h-[46px] flex flex-col items-center gap-px px-[4px] py-[6px] rounded-[4px] bg-bg-accent-light shrink-0">
+        <div class="date-item active min-w-[64px] w-auto h-[46px] flex flex-col items-center gap-px px-[4px] py-[6px] rounded-[4px] bg-bg-accent-light shrink-0 cursor-pointer" data-date="0325">
           <span class="text-[12px] font-medium leading-[16px] text-text-accent">3.25</span>
           <span class="text-[13px] font-medium leading-[18px] text-text-accent">今天</span>
         </div>
         <!-- 3.26 -->
-        <div class="w-[64px] h-[46px] flex flex-col items-center gap-[2px] px-[4px] py-[6px] rounded-[4px] bg-bg-gray shrink-0">
+        <div class="date-item min-w-[64px] w-auto h-[46px] flex flex-col items-center gap-[2px] px-[4px] py-[6px] rounded-[4px] bg-bg-gray shrink-0 cursor-pointer" data-date="0326">
           <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">3.26</span>
           <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">周日</span>
         </div>
         <!-- 3.27 -->
-        <div class="w-[64px] h-[46px] flex flex-col items-center gap-[2px] px-[4px] py-[6px] rounded-[4px] bg-bg-gray shrink-0">
+        <div class="date-item min-w-[64px] w-auto h-[46px] flex flex-col items-center gap-[2px] px-[4px] py-[6px] rounded-[4px] bg-bg-gray shrink-0 cursor-pointer" data-date="0327">
           <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">3.27</span>
           <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">周一</span>
         </div>
         <!-- 3.28 超V闪购节 -->
-        <div class="w-[64px] h-[46px] flex flex-col items-center gap-[2px] px-[4px] py-[6px] rounded-[4px] bg-bg-gray shrink-0">
+        <div class="date-item min-w-[64px] w-auto h-[46px] flex flex-col items-center gap-[2px] px-[4px] py-[6px] rounded-[4px] bg-bg-gray shrink-0 cursor-pointer" data-date="0328">
           <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">3.28</span>
-          <span class="text-[12px] font-medium leading-[16px] text-text-orange text-center w-full">超V闪购节</span>
+          <span class="text-[12px] font-medium leading-[16px] text-text-orange text-center w-full whitespace-nowrap">超V闪购节</span>
         </div>
         <!-- 3.29 -->
-        <div class="w-[64px] h-[46px] flex flex-col items-center gap-[2px] px-[4px] py-[6px] rounded-[4px] bg-bg-gray shrink-0">
+        <div class="date-item min-w-[64px] w-auto h-[46px] flex flex-col items-center gap-[2px] px-[4px] py-[6px] rounded-[4px] bg-bg-gray shrink-0 cursor-pointer" data-date="0329">
           <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">3.29</span>
           <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">周三</span>
         </div>
-        <!-- 3.29 -->
-        <div class="w-[64px] h-[46px] flex flex-col items-center gap-[2px] px-[4px] py-[6px] rounded-[4px] bg-bg-gray shrink-0">
-          <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">3.29</span>
-          <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">周三</span>
+        <!-- 3.30 -->
+        <div class="date-item min-w-[64px] w-auto h-[46px] flex flex-col items-center gap-[2px] px-[4px] py-[6px] rounded-[4px] bg-bg-gray shrink-0 cursor-pointer" data-date="0330">
+          <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">3.30</span>
+          <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">周四</span>
         </div>
-        <!-- 3.29 -->
-        <div class="w-[64px] h-[46px] flex flex-col items-center gap-[2px] px-[4px] py-[6px] rounded-[4px] bg-bg-gray shrink-0">
-          <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">3.29</span>
-          <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">周三</span>
+        <!-- 3.31 -->
+        <div class="date-item min-w-[64px] w-auto h-[46px] flex flex-col items-center gap-[2px] px-[4px] py-[6px] rounded-[4px] bg-bg-gray shrink-0 cursor-pointer" data-date="0331">
+          <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">3.31</span>
+          <span class="text-[12px] font-medium leading-[16px] text-text-orange text-center w-full whitespace-nowrap">春季焕新</span>
         </div>
         <!-- 右侧占位（给日历按钮留空间） -->
         <div class="w-[49px] h-[46px] shrink-0"></div>
@@ -113,7 +113,7 @@
     </div>
 
     <!-- 活动卡片列表（渐变背景容器） -->
-    <div class="pt-0 px-[8px] pb-[8px] flex flex-col gap-[8px]" style="background: linear-gradient(to bottom, #ffffff, #f3f4f5)">
+    <div id="card-list" class="pt-0 px-[8px] pb-[8px] flex flex-col gap-[8px]" style="background: linear-gradient(to bottom, #ffffff, #f3f4f5)">
 
       <!-- 卡片 1: MUJI 大牌入驻 -->
       <article class="bg-bg-white flex gap-[8px] items-start px-[12px] py-[14px] rounded-[12px] relative border border-btn-pink-border">
@@ -302,16 +302,177 @@
 <script>
   const navbar = document.getElementById('navbar');
   const dateSelector = document.getElementById('date-selector');
+  const cardList = document.getElementById('card-list');
+  const dateItems = document.querySelectorAll('.date-item');
 
+  // 活动数据：每个日期对应不同的卡片列表
+  const activitiesData = {
+    '0325': [
+      { tag: '大牌入驻', tagColor: 'bg-bg-tag', title: 'MUJI 大牌入驻', logos: ['brand-logo-2.png'], time: '2026.03.24 10:00-03.31 10:00', highlights: ['新品牌入驻'], btn: { text: '立即预约', style: 'black' }, img: 'activity-1.png', imgClass: 'w-[259%] h-full max-w-none -left-[15.6%] top-0', border: true },
+      { tag: '超级大牌日', tagColor: 'bg-bg-tag', title: '春季内搭', logos: ['brand-logo-1.png','brand-logo-3.png','brand-logo-4.png','brand-logo-5.png'], logoMore: '30+大牌', time: '2026.03.24 10:00-03.31 10:00', highlights: ['全场低至1折','10天价保'], btn: { text: '马上抢', style: 'pink' }, img: 'activity-2.png', imgClass: 'w-[133%] h-[158%] max-w-none -left-[21%] -top-[12%]' },
+      { tag: '超级大牌日', tagColor: 'bg-bg-tag', title: '春季内搭', logos: ['brand-logo-1.png','brand-logo-3.png','brand-logo-4.png','brand-logo-5.png'], logoMore: '30+大牌', time: '2026.03.24 10:00-03.31 10:00', highlights: ['全场低至1折','可叠加￥100品牌券'], btn: { text: '马上抢', style: 'pink' }, img: 'activity-3.png', imgClass: 'w-[131%] h-[104%] max-w-none -left-[15.6%] top-0', imgBorder: true },
+      { tag: '今日大牌', tagColor: 'bg-bg-tag', title: '速写男士穿搭术', logos: ['brand-logo-6.png'], time: '2026.03.24 10:00-03.31 10:00', highlights: ['全场低至1折','10天价保'], btn: { text: '马上抢', style: 'pink' }, img: 'activity-4.png', imgClass: 'w-[147%] h-[231%] max-w-none -left-[20%] -top-[39%]' },
+      { tag: '今日大牌', tagColor: 'bg-bg-tag', title: '运动出游季', logos: ['brand-logo-1.png','brand-logo-3.png','brand-logo-4.png','brand-logo-5.png'], logoMore: '30+大牌', time: '2026.03.24 10:00-03.31 10:00', highlights: ['全场低至1折','10天价保'], btn: { text: '立即预约', style: 'black' }, img: 'activity-5.png', imgClass: 'w-[169%] h-[133%] max-w-none -left-[39%] top-0' },
+      { tag: '大促', tagColor: 'bg-bg-tag', title: '春季内搭', logos: ['brand-logo-1.png','brand-logo-3.png','brand-logo-4.png','brand-logo-5.png'], logoMore: '30+大牌', time: '2026.03.24 10:00-03.31 10:00', highlights: ['一件立省 限时低价抢！'], btn: { text: '等待抢购', style: 'outline' }, img: 'activity-6.jpg', imgClass: 'w-[114%] h-[114%] max-w-none -left-[7%] -top-[0.4%]' },
+    ],
+    '0326': [
+      { tag: '超级大牌日', tagColor: 'bg-bg-tag', title: '焕新美妆节', logos: ['brand-logo-1.png','brand-logo-3.png'], logoMore: '20+大牌', time: '2026.03.26 10:00-03.28 10:00', highlights: ['爆款买一送一','满199减50'], btn: { text: '马上抢', style: 'pink' }, img: 'activity-2.png', imgClass: 'w-[133%] h-[158%] max-w-none -left-[21%] -top-[12%]' },
+      { tag: '今日大牌', tagColor: 'bg-bg-tag', title: 'NIKE 运动专场', logos: ['brand-logo-4.png'], time: '2026.03.26 00:00-03.27 00:00', highlights: ['精选低至3折','限时免邮'], btn: { text: '马上抢', style: 'pink' }, img: 'activity-5.png', imgClass: 'w-[169%] h-[133%] max-w-none -left-[39%] top-0' },
+      { tag: '大牌入驻', tagColor: 'bg-bg-tag', title: 'ZARA HOME 新品', logos: ['brand-logo-2.png'], time: '2026.03.26 10:00-04.02 10:00', highlights: ['新品牌入驻','首单立减30'], btn: { text: '立即预约', style: 'black' }, img: 'activity-1.png', imgClass: 'w-[259%] h-full max-w-none -left-[15.6%] top-0', border: true },
+      { tag: '超级大牌日', tagColor: 'bg-bg-tag', title: '春季护肤', logos: ['brand-logo-1.png','brand-logo-3.png','brand-logo-5.png'], logoMore: '15+大牌', time: '2026.03.26 10:00-03.30 10:00', highlights: ['全场低至2折'], btn: { text: '等待抢购', style: 'outline' }, img: 'activity-3.png', imgClass: 'w-[131%] h-[104%] max-w-none -left-[15.6%] top-0' },
+    ],
+    '0327': [
+      { tag: '大促', tagColor: 'bg-bg-tag', title: '家居焕新季', logos: ['brand-logo-6.png','brand-logo-1.png'], logoMore: '10+品牌', time: '2026.03.27 10:00-03.29 10:00', highlights: ['满300减60','限量赠品'], btn: { text: '马上抢', style: 'pink' }, img: 'activity-4.png', imgClass: 'w-[147%] h-[231%] max-w-none -left-[20%] -top-[39%]' },
+      { tag: '今日大牌', tagColor: 'bg-bg-tag', title: 'Adidas 运动季', logos: ['brand-logo-3.png'], time: '2026.03.27 00:00-03.28 00:00', highlights: ['精选低至4折','新品首发'], btn: { text: '马上抢', style: 'pink' }, img: 'activity-5.png', imgClass: 'w-[169%] h-[133%] max-w-none -left-[39%] top-0' },
+      { tag: '超级大牌日', tagColor: 'bg-bg-tag', title: '母婴好物节', logos: ['brand-logo-1.png','brand-logo-4.png','brand-logo-5.png'], logoMore: '25+大牌', time: '2026.03.27 10:00-03.31 10:00', highlights: ['全场低至1折','10天价保'], btn: { text: '立即预约', style: 'black' }, img: 'activity-6.jpg', imgClass: 'w-[114%] h-[114%] max-w-none -left-[7%] -top-[0.4%]' },
+    ],
+    '0328': [
+      { tag: '超V闪购节', tagColor: 'bg-bg-tag', title: '超级闪购 · 全场狂欢', logos: ['brand-logo-1.png','brand-logo-3.png','brand-logo-4.png','brand-logo-5.png'], logoMore: '100+大牌', time: '2026.03.28 00:00-03.29 00:00', highlights: ['全场低至1折','满499减100','前1小时额外9折'], btn: { text: '马上抢', style: 'pink' }, img: 'activity-2.png', imgClass: 'w-[133%] h-[158%] max-w-none -left-[21%] -top-[12%]' },
+      { tag: '超V闪购节', tagColor: 'bg-bg-tag', title: '美妆限时秒杀', logos: ['brand-logo-1.png','brand-logo-3.png','brand-logo-5.png'], logoMore: '50+大牌', time: '2026.03.28 10:00-03.28 22:00', highlights: ['爆款5折起','买即送小样'], btn: { text: '马上抢', style: 'pink' }, img: 'activity-1.png', imgClass: 'w-[259%] h-full max-w-none -left-[15.6%] top-0', border: true },
+      { tag: '超V闪购节', tagColor: 'bg-bg-tag', title: '数码家电专场', logos: ['brand-logo-6.png','brand-logo-2.png'], logoMore: '20+品牌', time: '2026.03.28 00:00-03.29 00:00', highlights: ['爆款直降500','以旧换新补贴'], btn: { text: '马上抢', style: 'pink' }, img: 'activity-4.png', imgClass: 'w-[147%] h-[231%] max-w-none -left-[20%] -top-[39%]' },
+      { tag: '超V闪购节', tagColor: 'bg-bg-tag', title: '运动户外清仓', logos: ['brand-logo-1.png','brand-logo-3.png','brand-logo-4.png'], logoMore: '30+大牌', time: '2026.03.28 10:00-03.30 10:00', highlights: ['全场低至2折'], btn: { text: '立即预约', style: 'black' }, img: 'activity-5.png', imgClass: 'w-[169%] h-[133%] max-w-none -left-[39%] top-0' },
+      { tag: '超V闪购节', tagColor: 'bg-bg-tag', title: '服饰鞋包盛典', logos: ['brand-logo-1.png','brand-logo-3.png','brand-logo-4.png','brand-logo-5.png'], logoMore: '60+大牌', time: '2026.03.28 00:00-03.29 00:00', highlights: ['全场低至1折','可叠加￥200大促券'], btn: { text: '等待抢购', style: 'outline' }, img: 'activity-3.png', imgClass: 'w-[131%] h-[104%] max-w-none -left-[15.6%] top-0' },
+    ],
+    '0329': [
+      { tag: '超级大牌日', tagColor: 'bg-bg-tag', title: '数码尖货日', logos: ['brand-logo-6.png','brand-logo-2.png'], logoMore: '15+品牌', time: '2026.03.29 10:00-03.31 10:00', highlights: ['爆款直降300','分期免息'], btn: { text: '马上抢', style: 'pink' }, img: 'activity-4.png', imgClass: 'w-[147%] h-[231%] max-w-none -left-[20%] -top-[39%]' },
+      { tag: '大牌入驻', tagColor: 'bg-bg-tag', title: 'COS 春季新品', logos: ['brand-logo-2.png'], time: '2026.03.29 10:00-04.05 10:00', highlights: ['新品牌入驻','首单9折'], btn: { text: '立即预约', style: 'black' }, img: 'activity-1.png', imgClass: 'w-[259%] h-full max-w-none -left-[15.6%] top-0', border: true },
+      { tag: '今日大牌', tagColor: 'bg-bg-tag', title: '潮流配饰', logos: ['brand-logo-1.png','brand-logo-3.png','brand-logo-5.png'], logoMore: '20+大牌', time: '2026.03.29 10:00-04.02 10:00', highlights: ['全场低至3折'], btn: { text: '等待抢购', style: 'outline' }, img: 'activity-6.jpg', imgClass: 'w-[114%] h-[114%] max-w-none -left-[7%] -top-[0.4%]' },
+    ],
+    '0330': [
+      { tag: '今日大牌', tagColor: 'bg-bg-tag', title: '轻奢好物集', logos: ['brand-logo-1.png','brand-logo-6.png'], logoMore: '8+大牌', time: '2026.03.30 10:00-04.01 10:00', highlights: ['满500减100','限量礼盒'], btn: { text: '马上抢', style: 'pink' }, img: 'activity-2.png', imgClass: 'w-[133%] h-[158%] max-w-none -left-[21%] -top-[12%]' },
+      { tag: '超级大牌日', tagColor: 'bg-bg-tag', title: '食品生鲜节', logos: ['brand-logo-3.png','brand-logo-4.png','brand-logo-5.png'], logoMore: '40+品牌', time: '2026.03.30 00:00-03.31 00:00', highlights: ['爆款低至9.9','新人专享5折'], btn: { text: '马上抢', style: 'pink' }, img: 'activity-3.png', imgClass: 'w-[131%] h-[104%] max-w-none -left-[15.6%] top-0' },
+      { tag: '大促', tagColor: 'bg-bg-tag', title: '童装春上新', logos: ['brand-logo-1.png','brand-logo-3.png'], logoMore: '12+品牌', time: '2026.03.30 10:00-04.03 10:00', highlights: ['全场低至2折','买2件额外8折'], btn: { text: '立即预约', style: 'black' }, img: 'activity-5.png', imgClass: 'w-[169%] h-[133%] max-w-none -left-[39%] top-0' },
+    ],
+    '0331': [
+      { tag: '春季焕新', tagColor: 'bg-bg-tag', title: '春季焕新盛典', logos: ['brand-logo-1.png','brand-logo-3.png','brand-logo-4.png','brand-logo-5.png'], logoMore: '80+大牌', time: '2026.03.31 00:00-04.02 00:00', highlights: ['全场低至1折','满399减80','限量抢券'], btn: { text: '马上抢', style: 'pink' }, img: 'activity-2.png', imgClass: 'w-[133%] h-[158%] max-w-none -left-[21%] -top-[12%]' },
+      { tag: '春季焕新', tagColor: 'bg-bg-tag', title: '美妆焕新季', logos: ['brand-logo-1.png','brand-logo-3.png','brand-logo-5.png'], logoMore: '30+大牌', time: '2026.03.31 10:00-04.03 10:00', highlights: ['爆款买赠','满199减40'], btn: { text: '马上抢', style: 'pink' }, img: 'activity-1.png', imgClass: 'w-[259%] h-full max-w-none -left-[15.6%] top-0', border: true },
+      { tag: '春季焕新', tagColor: 'bg-bg-tag', title: '家居生活馆', logos: ['brand-logo-6.png','brand-logo-2.png'], logoMore: '20+品牌', time: '2026.03.31 10:00-04.04 10:00', highlights: ['满300减50','限量赠品'], btn: { text: '立即预约', style: 'black' }, img: 'activity-4.png', imgClass: 'w-[147%] h-[231%] max-w-none -left-[20%] -top-[39%]' },
+      { tag: '春季焕新', tagColor: 'bg-bg-tag', title: '运动潮流季', logos: ['brand-logo-1.png','brand-logo-3.png','brand-logo-4.png'], logoMore: '25+大牌', time: '2026.03.31 00:00-04.02 00:00', highlights: ['全场低至2折'], btn: { text: '等待抢购', style: 'outline' }, img: 'activity-5.png', imgClass: 'w-[169%] h-[133%] max-w-none -left-[39%] top-0' },
+    ],
+  };
+
+  /**
+   * 根据活动数据生成卡片 HTML
+   */
+  function renderCard(item) {
+    // Logo 行
+    let logosHtml = '';
+    if (item.logos && item.logos.length > 0) {
+      logosHtml = item.logos.map(logo => `
+            <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
+              <img src="../assets/images/${logo}" alt="" class="w-[36px] h-[18px] object-contain">
+            </div>`).join('');
+      if (item.logoMore) {
+        logosHtml += `
+            <span class="text-[11px] font-medium leading-[16px] text-text-disabled whitespace-nowrap">${item.logoMore}</span>`;
+      }
+    }
+
+    // 亮点标签
+    let highlightsHtml = item.highlights.map((h, i) => {
+      let html = `<span class="text-[11px] leading-[16px] text-text-accent whitespace-nowrap">${h}</span>`;
+      if (i < item.highlights.length - 1) {
+        html += `\n              <img src="../assets/images/dot-separator.svg" alt="" class="w-[1.5px] h-[1.5px]">`;
+      }
+      return html;
+    }).join('\n');
+
+    // 按钮样式
+    let btnClass = '';
+    let btnStyle = '';
+    if (item.btn.style === 'black') {
+      btnClass = 'bg-bg-black text-text-white';
+    } else if (item.btn.style === 'pink') {
+      btnStyle = 'style="background: linear-gradient(-90deg, #ff11a0 0.11%, #ff0777 99.89%)"';
+      btnClass = 'text-text-white';
+    } else if (item.btn.style === 'outline') {
+      btnClass = 'bg-transparent text-text-primary border-[0.5px] border-border-mid';
+    }
+
+    // 卡片边框（仅部分卡片有粉色边框）
+    const cardBorder = item.border ? 'border border-btn-pink-border' : '';
+
+    // 缩略图边框
+    const thumbBorder = item.imgBorder ? 'border border-border-light' : '';
+
+    return `
+      <article class="bg-bg-white flex gap-[8px] items-start px-[12px] py-[14px] rounded-[12px] relative ${cardBorder}">
+        <div class="w-[90px] h-[114px] rounded-[8px] overflow-hidden relative shrink-0 ${thumbBorder}">
+          <img src="../assets/images/${item.img}" alt="" class="absolute ${item.imgClass}">
+          <span class="absolute top-0 left-0 px-[4px] py-[2px] ${item.tagColor} text-text-white text-[10px] leading-[14px] rounded-br-[2px] rounded-tr-[2px] rounded-bl-[2px] whitespace-nowrap">${item.tag}</span>
+        </div>
+        <div class="flex-1 min-w-0 flex flex-col gap-[4px]">
+          <h3 class="text-[14px] font-medium leading-[18px] text-text-primary">${item.title}</h3>
+          <div class="flex gap-[4px] items-center">
+            ${logosHtml}
+          </div>
+          <p class="text-[11px] leading-[16px] text-text-secondary">活动时间：${item.time}</p>
+          <div class="flex flex-wrap gap-[4px] items-center">
+            ${highlightsHtml}
+          </div>
+        </div>
+        <button class="absolute bottom-[12px] right-[12px] min-w-[48px] max-w-[351px] w-[66px] h-[24px] text-[12px] font-medium leading-[16px] rounded-[6px] flex items-center justify-center gap-[4px] px-[12px] py-[4px] overflow-hidden whitespace-nowrap cursor-pointer ${btnClass}" ${btnStyle}>${item.btn.text}</button>
+      </article>`;
+  }
+
+  const dateList = document.getElementById('date-list');
+
+  /**
+   * 切换日期，渲染对应卡片
+   */
+  function switchDate(dateKey) {
+    const items = activitiesData[dateKey];
+    if (!items) return;
+
+    // 切换选中态样式
+    dateItems.forEach(el => {
+      if (el.dataset.date === dateKey) {
+        el.classList.remove('bg-bg-gray');
+        el.classList.add('active', 'bg-bg-accent-light');
+        const spans = el.querySelectorAll('span');
+        spans[0].className = 'text-[12px] font-medium leading-[16px] text-text-accent';
+        spans[1].className = 'text-[13px] font-medium leading-[18px] text-text-accent whitespace-nowrap';
+      } else {
+        el.classList.remove('active', 'bg-bg-accent-light');
+        el.classList.add('bg-bg-gray');
+        const spans = el.querySelectorAll('span');
+        spans[0].className = 'text-[12px] leading-[16px] text-text-secondary text-center w-full';
+        if (el.dataset.date === '0328') {
+          spans[1].className = 'text-[12px] font-medium leading-[16px] text-text-orange text-center w-full whitespace-nowrap';
+        } else if (el.dataset.date === '0331') {
+          spans[1].className = 'text-[12px] font-medium leading-[16px] text-text-orange text-center w-full whitespace-nowrap';
+        } else {
+          spans[1].className = 'text-[12px] leading-[16px] text-text-secondary text-center w-full';
+        }
+      }
+    });
+
+    // 渲染卡片
+    cardList.innerHTML = items.map(item => renderCard(item)).join('');
+
+    // 将选中的日期项滚动到可视区域
+    const activeEl = document.querySelector('.date-item.active');
+    if (activeEl) {
+      activeEl.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }
+  }
+
+  // 绑定日期点击事件
+  dateItems.forEach(el => {
+    el.addEventListener('click', () => {
+      if (el.classList.contains('active')) return;
+      switchDate(el.dataset.date);
+    });
+  });
+
+  // 滚动事件：导航栏背景 + 吸顶圆角
   window.addEventListener('scroll', () => {
-    // 导航栏背景
     if (window.scrollY > 0) {
       navbar.style.backgroundColor = '#ffffff';
     } else {
       navbar.style.backgroundColor = 'transparent';
     }
 
-    // 日期选择器吸顶时去掉圆角
     const rect = dateSelector.getBoundingClientRect();
     if (rect.top <= 89) {
       dateSelector.style.borderTopLeftRadius = '0';
