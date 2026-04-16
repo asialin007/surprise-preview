@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
+  base: '/surprise-preview/',
   build: {
     rollupOptions: {
       input: {
