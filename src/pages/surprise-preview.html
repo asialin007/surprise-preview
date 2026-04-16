@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>惊喜预告</title>
+  <link rel="stylesheet" href="/src/css/main.css">
+</head>
+<body class="bg-bg-gray" style="background-image: url('../assets/images/bg-header.svg'); background-repeat: no-repeat; background-position: top center; background-size: 375px 302px;">
+
+<div class="w-[375px] min-h-screen relative mx-auto overflow-x-clip">
+
+  <!-- ========== 导航栏（固定顶部，透明背景） ========== -->
+  <header id="navbar" class="fixed top-0 left-1/2 -translate-x-1/2 w-[375px] z-100 transition-[background-color] duration-200">
+    <!-- 状态栏 44px -->
+    <div class="h-[44px] flex justify-between items-center px-[24px]">
+      <div>
+        <span class="font-['SF_Pro_Text',sans-serif] text-[15px] font-semibold leading-[20px] tracking-[-0.5px] text-text-primary">9:41</span>
+      </div>
+      <div class="flex items-center gap-[5px]">
+        <!-- 信号 -->
+        <svg width="17" height="11" viewBox="0 0 17 11" fill="none">
+          <rect x="0" y="7" width="3" height="4" fill="#1B1B1B"/>
+          <rect x="4" y="4" width="3" height="7" fill="#1B1B1B"/>
+          <rect x="8" y="2" width="3" height="9" fill="#1B1B1B"/>
+          <rect x="12" y="0" width="3" height="11" fill="#1B1B1B"/>
+        </svg>
+        <!-- WiFi -->
+        <svg width="15" height="11" viewBox="0 0 15 11" fill="none">
+          <path d="M7.5 11C8.328 11 9 10.328 9 9.5C9 8.672 8.328 8 7.5 8C6.672 8 6 8.672 6 9.5C6 10.328 6.672 11 7.5 11Z" fill="#1B1B1B"/>
+          <path d="M4 7.5C5 6.5 6.5 6 7.5 6C8.5 6 10 6.5 11 7.5" stroke="#1B1B1B" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M1.5 5C3.5 3 5.5 2 7.5 2C9.5 2 11.5 3 13.5 5" stroke="#1B1B1B" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <!-- 电池 -->
+        <div class="flex items-center gap-[1px]">
+          <div class="w-[22px] h-[11px] border border-text-primary rounded-[2.5px] p-[1px]">
+            <div class="w-[17px] h-[6px] bg-text-primary rounded-[1px]"></div>
+          </div>
+          <div class="w-[1.5px] h-[4px] bg-text-primary rounded-r-[1px]"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 导航内容 44px -->
+    <div class="h-[44px] relative flex items-center px-[12px]">
+      <!-- 左：返回 -->
+      <div class="flex items-center shrink-0">
+        <button class="w-[24px] h-[24px] flex items-center justify-center" aria-label="返回">
+          <img src="../assets/icons/arrow-left.svg" alt="返回" class="w-[24px] h-[24px]">
+        </button>
+      </div>
+      <!-- 中：标题 -->
+      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pb-[2px]">
+        <span class="text-[18px] font-medium leading-[22px] text-text-primary whitespace-nowrap">惊喜预告</span>
+      </div>
+      <!-- 右：我的预约 -->
+      <div class="absolute right-[12px] top-1/2 -translate-y-1/2 flex items-center">
+        <span class="text-[14px] leading-[18px] text-text-primary text-right whitespace-nowrap">我的预约</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== 内容区（日期选择器 + 卡片列表 同容器） ========== -->
+  <div class="mt-[93px] flex flex-col overflow-x-clip relative">
+
+    <!-- 日期选择器（sticky 吸顶，白底圆角） -->
+    <div id="date-selector" class="sticky top-[88px] z-50 bg-bg-white rounded-tl-[12px] rounded-tr-[12px] pt-[8px] pb-[8px] px-[8px] shrink-0 relative">
+      <!-- 日期滚动区 -->
+      <div class="flex gap-[4px] items-center overflow-x-auto" style="-webkit-overflow-scrolling: touch; scrollbar-width: none;">
+        <!-- 今天（选中态） -->
+        <div class="w-[64px] h-[46px] flex flex-col items-center gap-px px-[4px] py-[6px] rounded-[4px] bg-bg-accent-light shrink-0">
+          <span class="text-[12px] font-medium leading-[16px] text-text-accent">3.25</span>
+          <span class="text-[13px] font-medium leading-[18px] text-text-accent">今天</span>
+        </div>
+        <!-- 3.26 -->
+        <div class="w-[64px] h-[46px] flex flex-col items-center gap-[2px] px-[4px] py-[6px] rounded-[4px] bg-bg-gray shrink-0">
+          <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">3.26</span>
+          <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">周日</span>
+        </div>
+        <!-- 3.27 -->
+        <div class="w-[64px] h-[46px] flex flex-col items-center gap-[2px] px-[4px] py-[6px] rounded-[4px] bg-bg-gray shrink-0">
+          <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">3.27</span>
+          <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">周一</span>
+        </div>
+        <!-- 3.28 超V闪购节 -->
+        <div class="w-[64px] h-[46px] flex flex-col items-center gap-[2px] px-[4px] py-[6px] rounded-[4px] bg-bg-gray shrink-0">
+          <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">3.28</span>
+          <span class="text-[12px] font-medium leading-[16px] text-text-orange text-center w-full">超V闪购节</span>
+        </div>
+        <!-- 3.29 -->
+        <div class="w-[64px] h-[46px] flex flex-col items-center gap-[2px] px-[4px] py-[6px] rounded-[4px] bg-bg-gray shrink-0">
+          <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">3.29</span>
+          <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">周三</span>
+        </div>
+        <!-- 3.29 -->
+        <div class="w-[64px] h-[46px] flex flex-col items-center gap-[2px] px-[4px] py-[6px] rounded-[4px] bg-bg-gray shrink-0">
+          <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">3.29</span>
+          <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">周三</span>
+        </div>
+        <!-- 3.29 -->
+        <div class="w-[64px] h-[46px] flex flex-col items-center gap-[2px] px-[4px] py-[6px] rounded-[4px] bg-bg-gray shrink-0">
+          <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">3.29</span>
+          <span class="text-[12px] leading-[16px] text-text-secondary text-center w-full">周三</span>
+        </div>
+        <!-- 右侧占位（给日历按钮留空间） -->
+        <div class="w-[49px] h-[46px] shrink-0"></div>
+      </div>
+      <!-- 右侧渐变遮罩 + 日历按钮 -->
+      <div class="absolute right-[8px] top-1/2 -translate-y-1/2 h-[46px] w-[49px] bg-gradient-to-l from-white via-white via-[80%] to-transparent flex flex-col items-end justify-center gap-[3px] py-[4px] z-10">
+        <img src="../assets/icons/calendar.svg" alt="日历" class="w-[20px] h-[20px]">
+        <span class="text-[12px] leading-[16px] text-text-primary text-right">日历</span>
+      </div>
+    </div>
+
+    <!-- 活动卡片列表（渐变背景容器） -->
+    <div class="pt-0 px-[8px] pb-[8px] flex flex-col gap-[8px]" style="background: linear-gradient(to bottom, #ffffff, #f3f4f5)">
+
+      <!-- 卡片 1: MUJI 大牌入驻 -->
+      <article class="bg-bg-white flex gap-[8px] items-start px-[12px] py-[14px] rounded-[12px] relative border border-btn-pink-border">
+        <!-- 缩略图 -->
+        <div class="w-[90px] h-[114px] rounded-[8px] overflow-hidden relative shrink-0">
+          <img src="../assets/images/activity-1.png" alt="" class="absolute inset-0 w-[259%] h-full max-w-none -left-[15.6%] top-0">
+          <span class="absolute top-0 left-0 px-[4px] py-[2px] bg-bg-tag text-text-white text-[10px] leading-[14px] rounded-br-[2px] rounded-tr-[2px] rounded-bl-[2px] whitespace-nowrap">大牌入驻</span>
+        </div>
+        <!-- 内容 -->
+        <div class="flex-1 min-w-0 flex flex-col gap-[4px]">
+          <h3 class="text-[14px] font-medium leading-[18px] text-text-primary">MUJI 大牌入驻</h3>
+          <!-- Logo 行 -->
+          <div class="flex gap-[4px] items-center">
+            <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
+              <img src="../assets/images/brand-logo-2.png" alt="" class="w-[36px] h-[18px] object-contain">
+            </div>
+          </div>
+          <p class="text-[11px] leading-[16px] text-text-secondary">活动时间：2026.03.24 10:00-03.31 10:00</p>
+          <div class="flex flex-wrap gap-[4px] items-center">
+            <span class="text-[11px] leading-[16px] text-text-accent whitespace-nowrap">新品牌入驻</span>
+          </div>
+        </div>
+        <!-- 按钮：立即预约（黑底） -->
+        <button class="absolute bottom-[11px] right-[11px] min-w-[48px] max-w-[351px] w-[66px] h-[24px] bg-bg-black text-text-white text-[12px] font-medium leading-[16px] rounded-[6px] flex items-center justify-center gap-[4px] px-[12px] py-[4px] overflow-hidden whitespace-nowrap cursor-pointer">立即预约</button>
+      </article>
+
+      <!-- 卡片 2: 春季内搭 -->
+      <article class="bg-bg-white flex gap-[8px] items-start px-[12px] py-[14px] rounded-[12px] relative">
+        <div class="w-[90px] h-[114px] rounded-[8px] overflow-hidden relative shrink-0">
+          <img src="../assets/images/activity-2.png" alt="" class="absolute w-[133%] h-[158%] max-w-none -left-[21%] -top-[12%]">
+          <span class="absolute top-0 left-0 px-[4px] py-[2px] bg-bg-tag text-text-white text-[10px] leading-[14px] rounded-br-[2px] rounded-tr-[2px] rounded-bl-[2px] whitespace-nowrap">超级大牌日</span>
+        </div>
+        <div class="flex-1 min-w-0 flex flex-col gap-[4px]">
+          <h3 class="text-[14px] font-medium leading-[18px] text-text-primary">春季内搭</h3>
+          <div class="flex gap-[4px] items-center">
+            <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
+              <img src="../assets/images/brand-logo-1.png" alt="" class="w-[36px] h-[18px] object-contain">
+            </div>
+            <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
+              <img src="../assets/images/brand-logo-3.png" alt="" class="w-[36px] h-[18px] object-contain">
+            </div>
+            <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
+              <img src="../assets/images/brand-logo-4.png" alt="" class="w-[36px] h-[18px] object-contain">
+            </div>
+            <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
+              <img src="../assets/images/brand-logo-5.png" alt="" class="w-[36px] h-[18px] object-contain">
+            </div>
+            <span class="text-[11px] font-medium leading-[16px] text-text-disabled whitespace-nowrap">30+大牌</span>
+          </div>
+          <p class="text-[11px] leading-[16px] text-text-secondary">活动时间：2026.03.24 10:00-03.31 10:00</p>
+          <div class="flex flex-wrap gap-[4px] items-center">
+            <span class="text-[11px] leading-[16px] text-text-accent whitespace-nowrap">全场低至1折</span>
+            <img src="../assets/images/dot-separator.svg" alt="" class="w-[1.5px] h-[1.5px]">
+            <span class="text-[11px] leading-[16px] text-text-accent whitespace-nowrap">10天价保</span>
+          </div>
+        </div>
+        <!-- 按钮：马上抢（渐变粉） -->
+        <button class="absolute bottom-[12px] right-[12px] w-[66px] h-[24px] text-text-white text-[12px] font-medium leading-[16px] rounded-[6px] flex items-center justify-center gap-[4px] px-[12px] py-[4px] overflow-hidden whitespace-nowrap cursor-pointer" style="background: linear-gradient(-90deg, #ff11a0 0.11%, #ff0777 99.89%)">马上抢</button>
+      </article>
+
+      <!-- 卡片 3: 春季内搭 -->
+      <article class="bg-bg-white flex gap-[8px] items-start px-[12px] py-[14px] rounded-[12px] relative">
+        <div class="w-[90px] h-[114px] rounded-[8px] overflow-hidden relative shrink-0 border border-border-light">
+          <img src="../assets/images/activity-3.png" alt="" class="absolute w-[131%] h-[104%] max-w-none -left-[15.6%] top-0">
+          <span class="absolute top-0 left-0 px-[4px] py-[2px] bg-bg-tag text-text-white text-[10px] leading-[14px] rounded-br-[2px] rounded-tr-[2px] rounded-bl-[2px] whitespace-nowrap">超级大牌日</span>
+        </div>
+        <div class="flex-1 min-w-0 flex flex-col gap-[4px]">
+          <h3 class="text-[14px] font-medium leading-[18px] text-text-primary">春季内搭</h3>
+          <div class="flex gap-[4px] items-center">
+            <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
+              <img src="../assets/images/brand-logo-1.png" alt="" class="w-[36px] h-[18px] object-contain">
+            </div>
+            <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
+              <img src="../assets/images/brand-logo-3.png" alt="" class="w-[36px] h-[18px] object-contain">
+            </div>
+            <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
+              <img src="../assets/images/brand-logo-4.png" alt="" class="w-[36px] h-[18px] object-contain">
+            </div>
+            <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
+              <img src="../assets/images/brand-logo-5.png" alt="" class="w-[36px] h-[18px] object-contain">
+            </div>
+            <span class="text-[11px] font-medium leading-[16px] text-text-disabled whitespace-nowrap">30+大牌</span>
+          </div>
+          <p class="text-[11px] leading-[16px] text-text-secondary">活动时间：2026.03.24 10:00-03.31 10:00</p>
+          <div class="flex flex-wrap gap-[4px] items-center">
+            <span class="text-[11px] leading-[16px] text-text-accent whitespace-nowrap">全场低至1折</span>
+            <img src="../assets/images/dot-separator.svg" alt="" class="w-[1.5px] h-[1.5px]">
+            <span class="text-[11px] leading-[16px] text-text-accent whitespace-nowrap">可叠加￥100品牌券</span>
+          </div>
+        </div>
+        <button class="absolute bottom-[12px] right-[12px] w-[66px] h-[24px] text-text-white text-[12px] font-medium leading-[16px] rounded-[6px] flex items-center justify-center gap-[4px] px-[12px] py-[4px] overflow-hidden whitespace-nowrap cursor-pointer" style="background: linear-gradient(-90deg, #ff11a0 0.11%, #ff0777 99.89%)">马上抢</button>
+      </article>
+
+      <!-- 卡片 4: 速写男士穿搭术 -->
+      <article class="bg-bg-white flex gap-[8px] items-start px-[12px] py-[14px] rounded-[12px] relative">
+        <div class="w-[90px] h-[114px] rounded-[8px] overflow-hidden relative shrink-0">
+          <img src="../assets/images/activity-4.png" alt="" class="absolute w-[147%] h-[231%] max-w-none -left-[20%] -top-[39%]">
+          <span class="absolute top-0 left-0 px-[4px] py-[2px] bg-bg-tag text-text-white text-[10px] leading-[14px] rounded-br-[2px] rounded-tr-[2px] rounded-bl-[2px] whitespace-nowrap">今日大牌</span>
+        </div>
+        <div class="flex-1 min-w-0 flex flex-col gap-[4px]">
+          <h3 class="text-[14px] font-medium leading-[18px] text-text-primary">速写男士穿搭术</h3>
+          <div class="flex gap-[4px] items-center">
+            <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
+              <img src="../assets/images/brand-logo-6.png" alt="" class="w-[36px] h-[18px] object-contain">
+            </div>
+          </div>
+          <p class="text-[11px] leading-[16px] text-text-secondary">活动时间：2026.03.24 10:00-03.31 10:00</p>
+          <div class="flex flex-wrap gap-[4px] items-center">
+            <span class="text-[11px] leading-[16px] text-text-accent whitespace-nowrap">全场低至1折</span>
+            <img src="../assets/images/dot-separator.svg" alt="" class="w-[1.5px] h-[1.5px]">
+            <span class="text-[11px] leading-[16px] text-text-accent whitespace-nowrap">10天价保</span>
+          </div>
+        </div>
+        <button class="absolute bottom-[12px] right-[12px] w-[66px] h-[24px] text-text-white text-[12px] font-medium leading-[16px] rounded-[6px] flex items-center justify-center gap-[4px] px-[12px] py-[4px] overflow-hidden whitespace-nowrap cursor-pointer" style="background: linear-gradient(-90deg, #ff11a0 0.11%, #ff0777 99.89%)">马上抢</button>
+      </article>
+
+      <!-- 卡片 5: 运动出游季 -->
+      <article class="bg-bg-white flex gap-[8px] items-start px-[12px] py-[14px] rounded-[12px] relative">
+        <div class="w-[90px] h-[114px] rounded-[8px] overflow-hidden relative shrink-0">
+          <img src="../assets/images/activity-5.png" alt="" class="absolute w-[169%] h-[133%] max-w-none -left-[39%] top-0">
+          <span class="absolute top-0 left-0 px-[4px] py-[2px] bg-bg-tag text-text-white text-[10px] leading-[14px] rounded-br-[2px] rounded-tr-[2px] rounded-bl-[2px] whitespace-nowrap">今日大牌</span>
+        </div>
+        <div class="flex-1 min-w-0 flex flex-col gap-[4px]">
+          <h3 class="text-[14px] font-medium leading-[18px] text-text-primary">运动出游季</h3>
+          <div class="flex gap-[4px] items-center">
+            <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
+              <img src="../assets/images/brand-logo-1.png" alt="" class="w-[36px] h-[18px] object-contain">
+            </div>
+            <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
+              <img src="../assets/images/brand-logo-3.png" alt="" class="w-[36px] h-[18px] object-contain">
+            </div>
+            <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
+              <img src="../assets/images/brand-logo-4.png" alt="" class="w-[36px] h-[18px] object-contain">
+            </div>
+            <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
+              <img src="../assets/images/brand-logo-5.png" alt="" class="w-[36px] h-[18px] object-contain">
+            </div>
+            <span class="text-[11px] font-medium leading-[16px] text-text-disabled whitespace-nowrap">30+大牌</span>
+          </div>
+          <p class="text-[11px] leading-[16px] text-text-secondary">活动时间：2026.03.24 10:00-03.31 10:00</p>
+          <div class="flex flex-wrap gap-[4px] items-center">
+            <span class="text-[11px] leading-[16px] text-text-accent whitespace-nowrap">全场低至1折</span>
+            <img src="../assets/images/dot-separator.svg" alt="" class="w-[1.5px] h-[1.5px]">
+            <span class="text-[11px] leading-[16px] text-text-accent whitespace-nowrap">10天价保</span>
+          </div>
+        </div>
+        <button class="absolute bottom-[12px] right-[12px] min-w-[48px] max-w-[351px] w-[66px] h-[24px] bg-bg-black text-text-white text-[12px] font-medium leading-[16px] rounded-[6px] flex items-center justify-center gap-[4px] px-[12px] py-[4px] overflow-hidden whitespace-nowrap cursor-pointer">立即预约</button>
+      </article>
+
+      <!-- 卡片 6: 春季内搭（等待抢购） -->
+      <article class="bg-bg-white flex gap-[8px] items-start px-[12px] py-[14px] rounded-[12px] relative">
+        <div class="w-[90px] h-[114px] rounded-[8px] overflow-hidden relative shrink-0">
+          <img src="../assets/images/activity-6.jpg" alt="" class="absolute w-[114%] h-[114%] max-w-none -left-[7%] -top-[0.4%]">
+          <span class="absolute top-0 left-0 px-[4px] py-[2px] bg-bg-tag text-text-white text-[10px] leading-[14px] rounded-br-[2px] rounded-tr-[2px] rounded-bl-[2px] whitespace-nowrap">大促</span>
+        </div>
+        <div class="flex-1 min-w-0 flex flex-col gap-[4px]">
+          <h3 class="text-[14px] font-medium leading-[18px] text-text-primary">春季内搭</h3>
+          <div class="flex gap-[4px] items-center">
+            <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
+              <img src="../assets/images/brand-logo-1.png" alt="" class="w-[36px] h-[18px] object-contain">
+            </div>
+            <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
+              <img src="../assets/images/brand-logo-3.png" alt="" class="w-[36px] h-[18px] object-contain">
+            </div>
+            <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
+              <img src="../assets/images/brand-logo-4.png" alt="" class="w-[36px] h-[18px] object-contain">
+            </div>
+            <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
+              <img src="../assets/images/brand-logo-5.png" alt="" class="w-[36px] h-[18px] object-contain">
+            </div>
+            <span class="text-[11px] font-medium leading-[16px] text-text-disabled whitespace-nowrap">30+大牌</span>
+          </div>
+          <p class="text-[11px] leading-[16px] text-text-secondary">活动时间：2026.03.24 10:00-03.31 10:00</p>
+          <div class="flex flex-wrap gap-[4px] items-center">
+            <span class="text-[11px] leading-[16px] text-text-accent whitespace-nowrap">一件立省 限时低价抢！</span>
+          </div>
+        </div>
+        <!-- 按钮：等待抢购（描边） -->
+        <button class="absolute bottom-[12px] right-[12px] min-w-[48px] max-w-[351px] w-[66px] h-[24px] bg-transparent text-text-primary text-[12px] leading-[16px] rounded-[6px] flex items-center justify-center gap-[4px] px-[12px] py-[4px] overflow-hidden whitespace-nowrap cursor-pointer border-[0.5px] border-border-mid">等待抢购</button>
+      </article>
+
+    </div>
+  </div>
+
+</div>
+<script>
+  const navbar = document.getElementById('navbar');
+  const dateSelector = document.getElementById('date-selector');
+
+  window.addEventListener('scroll', () => {
+    // 导航栏背景
+    if (window.scrollY > 0) {
+      navbar.style.backgroundColor = '#ffffff';
+    } else {
+      navbar.style.backgroundColor = 'transparent';
+    }
+
+    // 日期选择器吸顶时去掉圆角
+    const rect = dateSelector.getBoundingClientRect();
+    if (rect.top <= 89) {
+      dateSelector.style.borderTopLeftRadius = '0';
+      dateSelector.style.borderTopRightRadius = '0';
+    } else {
+      dateSelector.style.borderTopLeftRadius = '12px';
+      dateSelector.style.borderTopRightRadius = '12px';
+    }
+  });
+</script>
+
+</body>
+</html>
