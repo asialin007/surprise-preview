@@ -305,6 +305,13 @@
   const cardList = document.getElementById('card-list');
   const dateItems = document.querySelectorAll('.date-item');
 
+  // 预加载所有图片资源，获取构建后的正确路径
+  const imageModules = import.meta.glob('../assets/images/*', { eager: true, as: 'url' });
+  const imgUrl = (name) => {
+    const key = Object.keys(imageModules).find(k => k.endsWith('/' + name));
+    return key ? imageModules[key] : '';
+  };
+
   // 活动数据：每个日期对应不同的卡片列表
   const activitiesData = {
     '0325': [
@@ -360,7 +367,7 @@
     if (item.logos && item.logos.length > 0) {
       logosHtml = item.logos.map(logo => `
             <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
-              <img src="../assets/images/${logo}" alt="" class="w-[36px] h-[18px] object-contain">
+              <img src="${imgUrl(logo)}" alt="" class="w-[36px] h-[18px] object-contain">
             </div>`).join('');
       if (item.logoMore) {
         logosHtml += `
@@ -372,7 +379,7 @@
     let highlightsHtml = item.highlights.map((h, i) => {
       let html = `<span class="text-[11px] leading-[16px] text-text-accent whitespace-nowrap">${h}</span>`;
       if (i < item.highlights.length - 1) {
-        html += `\n              <img src="../assets/images/dot-separator.svg" alt="" class="w-[1.5px] h-[1.5px]">`;
+        html += `\n              <img src="${imgUrl('dot-separator.svg')}" alt="" class="w-[1.5px] h-[1.5px]">`;
       }
       return html;
     }).join('\n');
@@ -398,7 +405,7 @@
     return `
       <article class="bg-bg-white flex gap-[8px] items-start px-[12px] py-[14px] rounded-[12px] relative ${cardBorder}">
         <div class="w-[90px] h-[114px] rounded-[8px] overflow-hidden relative shrink-0 ${thumbBorder}">
-          <img src="../assets/images/${item.img}" alt="" class="absolute ${item.imgClass}">
+          <img src="${imgUrl(item.img)}" alt="" class="absolute ${item.imgClass}">
           <span class="absolute top-0 left-0 px-[4px] py-[2px] ${item.tagColor} text-text-white text-[10px] leading-[14px] rounded-br-[2px] rounded-tr-[2px] rounded-bl-[2px] whitespace-nowrap">${item.tag}</span>
         </div>
         <div class="flex-1 min-w-0 flex flex-col gap-[4px]">
