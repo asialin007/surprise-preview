@@ -156,10 +156,10 @@
               <img src="/surprise-preview/assets/brand-logo-3-1zeLOtlO.png" alt="" class="w-[36px] h-[18px] object-contain">
             </div>
             <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
-              <img src="/surprise-preview/assets/brand-logo-4-DjIjMr2c.png" alt="" class="w-[36px] h-[18px] object-contain">
+              <img src="/surprise-preview/assets/brand-logo-5-DjIjMr2c.png" alt="" class="w-[36px] h-[18px] object-contain">
             </div>
             <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
-              <img src="/surprise-preview/assets/brand-logo-4-DjIjMr2c.png" alt="" class="w-[36px] h-[18px] object-contain">
+              <img src="/surprise-preview/assets/brand-logo-5-DjIjMr2c.png" alt="" class="w-[36px] h-[18px] object-contain">
             </div>
             <span class="text-[11px] font-medium leading-[16px] text-text-disabled whitespace-nowrap">30+大牌</span>
           </div>
@@ -190,10 +190,10 @@
               <img src="/surprise-preview/assets/brand-logo-3-1zeLOtlO.png" alt="" class="w-[36px] h-[18px] object-contain">
             </div>
             <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
-              <img src="/surprise-preview/assets/brand-logo-4-DjIjMr2c.png" alt="" class="w-[36px] h-[18px] object-contain">
+              <img src="/surprise-preview/assets/brand-logo-5-DjIjMr2c.png" alt="" class="w-[36px] h-[18px] object-contain">
             </div>
             <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
-              <img src="/surprise-preview/assets/brand-logo-4-DjIjMr2c.png" alt="" class="w-[36px] h-[18px] object-contain">
+              <img src="/surprise-preview/assets/brand-logo-5-DjIjMr2c.png" alt="" class="w-[36px] h-[18px] object-contain">
             </div>
             <span class="text-[11px] font-medium leading-[16px] text-text-disabled whitespace-nowrap">30+大牌</span>
           </div>
@@ -246,10 +246,10 @@
               <img src="/surprise-preview/assets/brand-logo-3-1zeLOtlO.png" alt="" class="w-[36px] h-[18px] object-contain">
             </div>
             <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
-              <img src="/surprise-preview/assets/brand-logo-4-DjIjMr2c.png" alt="" class="w-[36px] h-[18px] object-contain">
+              <img src="/surprise-preview/assets/brand-logo-5-DjIjMr2c.png" alt="" class="w-[36px] h-[18px] object-contain">
             </div>
             <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
-              <img src="/surprise-preview/assets/brand-logo-4-DjIjMr2c.png" alt="" class="w-[36px] h-[18px] object-contain">
+              <img src="/surprise-preview/assets/brand-logo-5-DjIjMr2c.png" alt="" class="w-[36px] h-[18px] object-contain">
             </div>
             <span class="text-[11px] font-medium leading-[16px] text-text-disabled whitespace-nowrap">30+大牌</span>
           </div>
@@ -279,10 +279,10 @@
               <img src="/surprise-preview/assets/brand-logo-3-1zeLOtlO.png" alt="" class="w-[36px] h-[18px] object-contain">
             </div>
             <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
-              <img src="/surprise-preview/assets/brand-logo-4-DjIjMr2c.png" alt="" class="w-[36px] h-[18px] object-contain">
+              <img src="/surprise-preview/assets/brand-logo-5-DjIjMr2c.png" alt="" class="w-[36px] h-[18px] object-contain">
             </div>
             <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
-              <img src="/surprise-preview/assets/brand-logo-4-DjIjMr2c.png" alt="" class="w-[36px] h-[18px] object-contain">
+              <img src="/surprise-preview/assets/brand-logo-5-DjIjMr2c.png" alt="" class="w-[36px] h-[18px] object-contain">
             </div>
             <span class="text-[11px] font-medium leading-[16px] text-text-disabled whitespace-nowrap">30+大牌</span>
           </div>
@@ -360,7 +360,7 @@
     if (item.logos && item.logos.length > 0) {
       logosHtml = item.logos.map(logo => `
             <div class="w-[45px] h-[28px] border border-border-light rounded-[4px] flex items-center justify-center py-[5px] px-[4.5px]">
-              <img src="../assets/images/${logo}" alt="" class="w-[36px] h-[18px] object-contain">
+              <img src="../../images/${logo}" alt="" class="w-[36px] h-[18px] object-contain">
             </div>`).join('');
       if (item.logoMore) {
         logosHtml += `
@@ -372,7 +372,7 @@
     let highlightsHtml = item.highlights.map((h, i) => {
       let html = `<span class="text-[11px] leading-[16px] text-text-accent whitespace-nowrap">${h}</span>`;
       if (i < item.highlights.length - 1) {
-        html += `\n              <img src="../assets/images/dot-separator.svg" alt="" class="w-[1.5px] h-[1.5px]">`;
+        html += `\n              <img src="../../images/dot-separator.svg" alt="" class="w-[1.5px] h-[1.5px]">`;
       }
       return html;
     }).join('\n');
@@ -398,7 +398,7 @@
     return `
       <article class="bg-bg-white flex gap-[8px] items-start px-[12px] py-[14px] rounded-[12px] relative ${cardBorder}">
         <div class="w-[90px] h-[114px] rounded-[8px] overflow-hidden relative shrink-0 ${thumbBorder}">
-          <img src="../assets/images/${item.img}" alt="" class="absolute ${item.imgClass}">
+          <img src="../../images/${item.img}" alt="" class="absolute ${item.imgClass}">
           <span class="absolute top-0 left-0 px-[4px] py-[2px] ${item.tagColor} text-text-white text-[10px] leading-[14px] rounded-br-[2px] rounded-tr-[2px] rounded-bl-[2px] whitespace-nowrap">${item.tag}</span>
         </div>
         <div class="flex-1 min-w-0 flex flex-col gap-[4px]">
